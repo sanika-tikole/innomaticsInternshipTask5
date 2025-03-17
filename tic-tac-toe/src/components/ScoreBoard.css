@@ -1,0 +1,59 @@
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 22rem;
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff); 
+    margin: 3rem auto;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scoreboard:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.score {
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem 0rem;
+    position: relative;
+}
+
+.x-score {
+    color: rgb(255, 70, 37);
+    background-color: rgba(255, 70, 37, 0.1);
+    border-bottom: 4px solid rgb(255, 70, 37);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.o-score {
+    color: rgb(44, 135, 255);
+    background-color: rgba(44, 135, 255, 0.1);
+    border-bottom: 4px solid rgb(44, 135, 255);
+    border-radius: 0 1rem 1rem 0;
+}
+
+.inactive {
+    border-bottom: 4px solid transparent;
+    opacity: 0.5; /* Dim effect for inactive players */
+}
+
+/* Fun Emoji Animation */
+.score::after {
+    content: '🏆';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}

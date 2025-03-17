@@ -1,0 +1,23 @@
+.start-over-btn {
+    background-color: #ff4757; /* Vibrant red */
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    margin: 1rem auto;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(255, 71, 87, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-over-btn:hover {
+    background-color: #e84118; /* Darker red on hover */
+    transform: scale(1.1); /* Slight pop effect */
+}
+
+.start-over-btn:active {
+    background-color: #c23616; /* Even darker red when clicked */
+    transform: scale(0.95); /* Slight shrink for click effect */
+}
